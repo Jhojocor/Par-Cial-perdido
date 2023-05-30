@@ -10,9 +10,16 @@ export class Form extends HTMLElement {
     }
 
     render() {
-        const something = this.ownerDocument.createElement('input');
-        something.textContent = "hola";
-        this.shadowRoot?.appendChild(something);
+        const container = this.ownerDocument.createElement('div');
+        const Name = this.ownerDocument.createElement('input');
+        Name.textContent = "Nombre de la receta";
+        const Ingredientes = this.ownerDocument.createElement('input');
+        Ingredientes.textContent = "Lista de ingredientes";
+        const Instrucciones = this.ownerDocument.createElement('input');
+        Instrucciones.textContent = "Instrucciones";
+        const Img = this.ownerDocument.createElement('input');
+        Img.textContent = "Aquí va el link de la imagen";
+        this.shadowRoot?.appendChild(container);
     }
 }
 
