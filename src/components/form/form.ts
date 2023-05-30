@@ -1,6 +1,5 @@
-import "./components/export"
 
-class AppContainer extends HTMLElement {
+export class Form extends HTMLElement {
     constructor(){
         super();
         this.attachShadow({mode: "open"})
@@ -11,9 +10,10 @@ class AppContainer extends HTMLElement {
     }
 
     render() {
-        const something = this.ownerDocument.createElement('app-Form');
+        const something = this.ownerDocument.createElement('input');
+        something.textContent = "hola";
         this.shadowRoot?.appendChild(something);
     }
 }
 
-customElements.define('app-container', AppContainer)
+customElements.define('app-Form', Form)
